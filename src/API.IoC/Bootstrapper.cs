@@ -35,7 +35,6 @@ namespace API.IoC
             services.AddValidations();
 
             services.AddAutoMapper(assemblies, ServiceLifetime.Transient);
-            services.AddMediatR(assemblies);
 
             return services;
         }

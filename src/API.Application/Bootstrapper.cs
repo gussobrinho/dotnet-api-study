@@ -14,7 +14,8 @@ namespace API.Application
             #endregion
 
             #region Querys
-            
+            services
+                .AddMediatR(typeof(SomarNumerosQueryHandler).Assembly);
             #endregion
 
             return services;
