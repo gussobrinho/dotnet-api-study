@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yJOVy4P3CCpwTNP77WxSmKxBkUv0WTCShcCzY6XSF13zaK2Ja4kQEMGq4Op063vzTjlMNloL0fkcJo5GxHTSXQ==",
+  "success": true,
+  "projectFilePath": "D:\\WORKSPACE\\dotnet-api-study\\src\\API.Domain\\API.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\bin\Debug\netcoreapp3.1\API.Application.Abstraction.deps.json
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\bin\Debug\netcoreapp3.1\API.Application.Abstraction.dll
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\bin\Debug\netcoreapp3.1\API.Application.Abstraction.pdb
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.csprojAssemblyReference.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.AssemblyInfoInputs.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.AssemblyInfo.cs
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.csproj.CoreCompileInputs.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.dll
+D:\WORKSPACE\dotnet-api-study\src\API.Application.Abstraction\obj\Debug\netcoreapp3.1\API.Application.Abstraction.pdb

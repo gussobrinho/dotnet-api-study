@@ -1,0 +1,9 @@
+D:\WORKSPACE\dotnet-api-study\src\API.Data\bin\Debug\netcoreapp3.1\API.Data.deps.json
+D:\WORKSPACE\dotnet-api-study\src\API.Data\bin\Debug\netcoreapp3.1\API.Data.dll
+D:\WORKSPACE\dotnet-api-study\src\API.Data\bin\Debug\netcoreapp3.1\API.Data.pdb
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.csprojAssemblyReference.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.AssemblyInfoInputs.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.AssemblyInfo.cs
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.csproj.CoreCompileInputs.cache
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.dll
+D:\WORKSPACE\dotnet-api-study\src\API.Data\obj\Debug\netcoreapp3.1\API.Data.pdb
