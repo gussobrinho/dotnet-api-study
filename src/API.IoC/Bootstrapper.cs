@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using FluentValidation;
 using API.Application;
 using API.Application.Abstraction;
-using MediatR;
+using API.Infrastructure.Repository;
 
 namespace API.IoC
 {
@@ -18,6 +18,7 @@ namespace API.IoC
             typeof(Domain.Bootstrapper).Assembly,
             typeof(Application.Bootstrapper).Assembly,
             typeof(Application.Abstraction.Bootstrapper).Assembly,
+            typeof(Infrastructure.Repository.Bootstrapper).Assembly,
         };
 
         public static IServiceCollection AddBootstrapperIoC(this IServiceCollection services, IConfiguration configuration)
@@ -25,7 +26,8 @@ namespace API.IoC
             services
                 .AddBootstrapperDomain()
                 .AddBootstrapperApplication()
-                .AddBootstrapperAbstraction();
+                .AddBootstrapperAbstraction()
+                .AddBootstrapperRepository(configuration);
 
             services.AddScoped<HttpClient>(s => new HttpClient(new HttpClientHandler
             {

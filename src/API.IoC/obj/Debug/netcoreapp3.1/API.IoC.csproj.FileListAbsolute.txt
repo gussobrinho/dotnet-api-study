@@ -14,3 +14,5 @@ D:\WORKSPACE\dotnet-api-study\src\API.IoC\bin\Debug\netcoreapp3.1\API.Applicatio
 D:\WORKSPACE\dotnet-api-study\src\API.IoC\bin\Debug\netcoreapp3.1\API.Domain.pdb
 D:\WORKSPACE\dotnet-api-study\src\API.IoC\bin\Debug\netcoreapp3.1\API.Application.pdb
 D:\WORKSPACE\dotnet-api-study\src\API.IoC\obj\Debug\netcoreapp3.1\API.IoC.csproj.CopyComplete
+D:\WORKSPACE\dotnet-api-study\src\API.IoC\bin\Debug\netcoreapp3.1\API.Infrastructure.Repository.dll
+D:\WORKSPACE\dotnet-api-study\src\API.IoC\bin\Debug\netcoreapp3.1\API.Infrastructure.Repository.pdb
