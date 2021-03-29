@@ -295,13 +295,12 @@ __pycache__/
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/src/.vs/API
+/.vs/
 /src/.vs/
-/src/API.API/bin/Debug/netcoreapp3.1
-/src/API.API/Logs
-/src/API.API/obj/Debug/netcoreapp3.1
-/src/API.API/obj/Release/netcoreapp3.1
-/src/API.API/obj
+/src/.vs/API
+/src/Application.API/bin/Debug/netcoreapp3.1
+/src/Application.API/obj/Debug/netcoreapp3.1
+/src/Application.API/obj/Release/netcoreapp3.1
 /src/API.Application/bin/Debug/netcoreapp3.1
 /src/API.Application/obj/Debug/netcoreapp3.1
 /src/API.Application/obj/Release/netcoreapp3.1
@@ -320,7 +319,6 @@ __pycache__/
 /src/API.Exceptions/obj
 /src/API.Infrastructure.Migrations/bin/Debug/netcoreapp3.1
 /src/API.Infrastructure.Migrations/obj/Debug/netcoreapp3.1
-/src/API.API/Properties/launchSettings.json
 /src/API.Infrastructure.Migrations/obj/Release/netcoreapp3.1
 /src/API.Infrastructure.Migrations/obj
 /src/API.Infrastructure.Repository/bin/Debug/netcoreapp3.1
