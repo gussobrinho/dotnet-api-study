@@ -5,7 +5,7 @@ using System.Text;
 
 namespace API.Application.Abstraction.Usuarios.Commands
 {
-    public class AdicionarUsuarioCommand : IRequest<bool>
+    public class AdicionarUsuarioCommand : IRequest
     {
         public string Nome { get; set; }
         public string Email { get; set; }

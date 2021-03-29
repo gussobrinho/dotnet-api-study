@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace API.Application.Usuarios.Commands
 {
-    public class AdicionarUsuarioCommandHandler : IRequestHandler<AdicionarUsuarioCommand, bool>
+    public class AdicionarUsuarioCommandHandler : IRequestHandler<AdicionarUsuarioCommand>
     {
         private readonly UsuarioService _service;
 
@@ -15,11 +15,11 @@ namespace API.Application.Usuarios.Commands
             this._service = service;
         }
 
-        public async Task<bool> Handle(AdicionarUsuarioCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(AdicionarUsuarioCommand request, CancellationToken cancellationToken)
         {
-            var result = await this._service.AdicionarUsuario(request.Nome, request.Email);
+            await this._service.AdicionarUsuario(request.Nome, request.Email);
 
-            return result;
+            return Unit.Value;
         }
     }
 }

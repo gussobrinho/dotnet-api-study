@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Infrastructure.Repository.Repositories
 {
@@ -18,14 +19,7 @@ namespace API.Infrastructure.Repository.Repositories
 
         public async Task Add(Usuario usuario)
         {
-            try
-            {
-                await base.InsertAsync(usuario);
-            }
-            catch(Exception ex)
-            {
-
-            }
+            await base.InsertAsync(usuario);
         }
     }
 }
