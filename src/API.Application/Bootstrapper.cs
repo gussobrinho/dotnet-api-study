@@ -1,8 +1,6 @@
-﻿using API.Application.Somas.Querys;
+﻿using API.Application.Usuarios.Commands;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using API.Application.Abstraction.Usuarios.Commands;
-using API.Application.Usuarios.Commands;
 
 namespace API.Application
 {
@@ -16,8 +14,7 @@ namespace API.Application
             #endregion
 
             #region Querys
-            services
-                .AddMediatR(typeof(SomarNumerosQueryHandler).Assembly);
+
             #endregion
 
             return services;

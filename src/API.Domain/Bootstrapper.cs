@@ -1,5 +1,4 @@
-﻿using API.Domain.Somas;
-using API.Domain.Usuarios;
+﻿using API.Domain.Usuarios;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace API.Domain
@@ -10,8 +9,6 @@ namespace API.Domain
         {
             /// EXEMPLO ///
             //services.AddScoped<service>();
-            services
-                .AddScoped<SomaService>();
             services
                 .AddScoped<UsuarioService>();
 
