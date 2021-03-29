@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Domain.Usuarios
 {
-    public class UsuarioService
+    public class UsuarioService : IUsuarioService
     {
         private IUsuarioRepository _repository;
 
@@ -14,13 +14,13 @@ namespace API.Domain.Usuarios
             this._repository = repository;
         }
 
-        public async Task<bool> AdicionarUsuario(string nome, string email)
+        public async Task AdicionarUsuario(string nome, string email)
         {
             var usuario = Usuario.New(nome, email);
 
             await this._repository.Add(usuario);
 
-            return true;
+            //return true;
         }
     }
 }

@@ -12,6 +12,9 @@ namespace API.Domain
             services
                 .AddScoped<UsuarioService>();
 
+            services
+                .AddScoped<IUsuarioService, UsuarioService>();
+
             //services.AddScoped<Interface, Service>();
 
             return services;

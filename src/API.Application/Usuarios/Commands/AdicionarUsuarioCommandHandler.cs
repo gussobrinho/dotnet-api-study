@@ -8,9 +8,9 @@ namespace API.Application.Usuarios.Commands
 {
     public class AdicionarUsuarioCommandHandler : IRequestHandler<AdicionarUsuarioCommand>
     {
-        private readonly UsuarioService _service;
+        private readonly IUsuarioService _service;
 
-        public AdicionarUsuarioCommandHandler(UsuarioService service)
+        public AdicionarUsuarioCommandHandler(IUsuarioService service)
         {
             this._service = service;
         }
