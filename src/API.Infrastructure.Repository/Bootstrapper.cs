@@ -18,7 +18,6 @@ namespace API.Infrastructure.Repository
                })
                .AddScoped<DbContext>(s => s.GetService<ApiDbContext>());
 
-            //Pedir Ajuda
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             return services;
