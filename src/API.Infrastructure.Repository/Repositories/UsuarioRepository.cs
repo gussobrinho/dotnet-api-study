@@ -21,5 +21,10 @@ namespace API.Infrastructure.Repository.Repositories
         {
             await base.InsertAsync(usuario);
         }
+
+        public async Task<List<Usuario>> FindAll()
+        {
+            return await base.EntitySet.ToListAsync();
+        }
     }
 }

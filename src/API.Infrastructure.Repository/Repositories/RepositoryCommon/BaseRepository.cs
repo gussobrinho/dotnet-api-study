@@ -19,8 +19,7 @@ namespace API.Infrastructure.Repository.Repositories.RepositoryCommon
             _dataset = _context.Set<T>();
         }
 
-        //Testar
-        //public DbSet<T> EntitySet { get => _dataset; }
+        public DbSet<T> EntitySet { get => _dataset; }
 
         public async Task<bool> DeleteAsync(Guid ticket)
         {
