@@ -1,4 +1,6 @@
 ﻿using API.Application.Abstraction.Usuarios.Commands;
+using API.Application.Abstraction.Usuarios.Querys;
+using API.Application.Abstraction.Usuarios.Response;
 using application.API.Controllers.Usuarios.Requests;
 using application.API.ViewModel;
 using MediatR;
@@ -24,10 +26,23 @@ namespace application.API.Controllers.Usuarios
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> SomarNumeros([FromBody] AdicionarUsuarioRequest model)
+        public async Task<IActionResult> CadastrarUsuario([FromBody] AdicionarUsuarioRequest model)
         {
             var command = new AdicionarUsuarioCommand(model.Nome, model.Email);
             await this._mediator.Send(command);
+
+            return Ok();
+        }
+
+        [HttpGet("BuscarPorEmail")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ComumResponseViewModel<BuscarUsuarioPorEmailResponse>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> BuscarPorEmail([FromQuery] string email)
+        {
+            var query = new BuscarUsuarioPorEmailQuery(email);
+            await this._mediator.Send(query);
 
             return Ok();
         }

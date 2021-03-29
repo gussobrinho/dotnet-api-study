@@ -15,6 +15,7 @@
     <ProjectReference Include="..\API.Application.Abstraction\API.Application.Abstraction.csproj" />
     <ProjectReference Include="..\API.Application\API.Application.csproj" />
     <ProjectReference Include="..\API.Domain\API.Domain.csproj" />
+    <ProjectReference Include="..\API.Exceptions\API.Exceptions.csproj" />
     <ProjectReference Include="..\API.Infrastructure.Repository\API.Infrastructure.Repository.csproj" />
   </ItemGroup>
 

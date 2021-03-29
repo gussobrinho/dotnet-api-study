@@ -7,6 +7,7 @@ using FluentValidation;
 using API.Application;
 using API.Application.Abstraction;
 using API.Infrastructure.Repository;
+using API.Exceptions;
 
 namespace API.IoC
 {
@@ -19,6 +20,7 @@ namespace API.IoC
             typeof(Application.Bootstrapper).Assembly,
             typeof(Application.Abstraction.Bootstrapper).Assembly,
             typeof(Infrastructure.Repository.Bootstrapper).Assembly,
+            typeof(Exceptions.Bootstrapper).Assembly,
         };
 
         public static IServiceCollection AddBootstrapperIoC(this IServiceCollection services, IConfiguration configuration)
@@ -27,6 +29,7 @@ namespace API.IoC
                 .AddBootstrapperDomain()
                 .AddBootstrapperApplication()
                 .AddBootstrapperAbstraction()
+                .AddBootstrapperExceptions()
                 .AddBootstrapperRepository(configuration);
 
             services.AddScoped<HttpClient>(s => new HttpClient(new HttpClientHandler

@@ -26,5 +26,10 @@ namespace API.Infrastructure.Repository.Repositories
         {
             return await base.EntitySet.ToListAsync();
         }
+
+        public async Task<Usuario> FindByEmail(string email)
+        {
+            return await base.EntitySet.FirstAsync(x => x.Email == email);
+        }
     }
 }

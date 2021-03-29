@@ -7,5 +7,6 @@ namespace API.Domain.Usuarios
     {
         Task Add(Usuario usuario);
         Task<List<Usuario>> FindAll();
+        Task<Usuario> FindByEmail(string email);
     }
 }

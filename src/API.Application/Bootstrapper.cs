@@ -1,4 +1,5 @@
-﻿using API.Application.Usuarios.Commands;
+﻿using API.Application.Abstraction.Usuarios.Querys;
+using API.Application.Usuarios.Commands;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,7 +15,8 @@ namespace API.Application
             #endregion
 
             #region Querys
-
+            services
+                .AddMediatR(typeof(BuscarUsuarioPorEmailQuery).Assembly);
             #endregion
 
             return services;
