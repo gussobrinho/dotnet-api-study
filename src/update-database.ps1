@@ -1,0 +1,1 @@
+﻿dotnet fm migrate --output="./API.Infrastructure.Migrations/script.sql" -p Postgres -c "Host=localhost;Port=5437;Database=TesteDB;User ID=postgres;Password=rooter" -a .\API.Infrastructure.Migrations\bin\Debug\netcoreapp3.1\API.Infrastructure.Migrations.dll

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace API.Domain.Usuarios
 {
-    public class Usuario : BaseProps
+    public class Usuario : BaseEntity
     {
         public string Nome { get; protected set; }
         public string Email { get; protected set; }
@@ -23,8 +23,6 @@ namespace API.Domain.Usuarios
             usuario.Nome = nome;
             usuario.Email = email;
             usuario.Ticket = Guid.NewGuid();
-            usuario.CriadoEm = DateTime.Now;
-            usuario.AtualizadoEm = DateTime.Now;
 
             return usuario;
         }

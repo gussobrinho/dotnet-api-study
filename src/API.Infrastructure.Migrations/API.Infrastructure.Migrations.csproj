@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AssemblyName>API.Infrastructure.Migrations</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="2021\Configurations\Data\" />
+		<Folder Include="2021\Configurations\Snapshots\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentMigrator" Version="3.2.15" />
+	</ItemGroup>
+
+</Project>

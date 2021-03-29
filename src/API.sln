@@ -23,7 +23,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Application", "API.Appl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Application.Abstraction", "API.Application.Abstraction\API.Application.Abstraction.csproj", "{A8DD76D0-9BFF-447B-844F-0F555008E0D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Infrastructure.Repository", "API.Infrastructure.Repository\API.Infrastructure.Repository.csproj", "{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Infrastructure.Repository", "API.Infrastructure.Repository\API.Infrastructure.Repository.csproj", "{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Infrastructure.Migrations", "API.Infrastructure.Migrations\API.Infrastructure.Migrations.csproj", "{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{AE5D28B2-A776-435F-BE61-19B16E86099E}"
+	ProjectSection(SolutionItems) = preProject
+		update-database.ps1 = update-database.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +114,18 @@ Global
 		{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA}.Release|x64.Build.0 = Release|Any CPU
 		{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA}.Release|x86.Build.0 = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|x64.Build.0 = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +137,7 @@ Global
 		{4AF2D1DC-68D8-44FD-8846-C137B64BBF1A} = {CD72245D-9B24-45D9-9886-23C2B3DED35D}
 		{A8DD76D0-9BFF-447B-844F-0F555008E0D4} = {CD72245D-9B24-45D9-9886-23C2B3DED35D}
 		{9F918762-C3DB-46F1-AFAB-1D5C6188DAAA} = {FF28EC32-AF56-45FC-B02B-069AECB0E26E}
+		{B4FA32C3-B9F2-4026-9F14-0ECC82E566ED} = {FF28EC32-AF56-45FC-B02B-069AECB0E26E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10EBEFDB-3992-4946-8B4A-59056E8CA3B5}

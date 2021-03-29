@@ -1,7 +1,8 @@
 ﻿using API.Application.Somas.Querys;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
+using API.Application.Abstraction.Usuarios.Commands;
+using API.Application.Usuarios.Commands;
 
 namespace API.Application
 {
@@ -10,7 +11,8 @@ namespace API.Application
         public static IServiceCollection AddBootstrapperApplication(this IServiceCollection services)
         {
             #region Commands
-
+            services
+                .AddMediatR(typeof(AdicionarUsuarioCommandHandler).Assembly);
             #endregion
 
             #region Querys

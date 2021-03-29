@@ -3,7 +3,6 @@ using application.API.Controllers.Somas.Requests;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace application.API.Controllers.Somas

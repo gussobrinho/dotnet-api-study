@@ -1,10 +1,31 @@
-﻿using System;
+﻿using API.Domain.Usuarios;
+using API.Infrastructure.Repository.Context;
+using API.Infrastructure.Repository.Repositories.RepositoryCommon;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace API.Infrastructure.Repository.Repositories
 {
-    public class UsuarioRepository
+    public class UsuarioRepository : BaseRepository<Usuario>, IUsuarioRepository
     {
+        public UsuarioRepository(ApiDbContext context)
+            : base(context)
+        {
+
+        }
+
+        public async Task Add(Usuario usuario)
+        {
+            try
+            {
+                await base.InsertAsync(usuario);
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
     }
 }

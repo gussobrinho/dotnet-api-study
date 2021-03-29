@@ -1,5 +1,4 @@
-﻿using API.Domain
-using API.Domain.Usuarios;
+﻿using API.Domain.Usuarios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -12,6 +11,7 @@ namespace API.Infrastructure.Repository.Context.Configuration
             builder.ToTable("TB_Usuario");
             builder.HasKey(b => b.ID);
 
+            builder.Property(b => b.ID).UseIdentityColumn().HasColumnName("IDUsuario");
             builder.Property(b => b.Ticket).HasColumnName("IDTicket");
             builder.Property(b => b.Nome).HasColumnName("NMUsuario");
             builder.Property(b => b.Email).HasColumnName("DSEmail");

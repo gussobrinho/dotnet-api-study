@@ -797,6 +797,7 @@
       },
       "API.Infrastructure.Repository/1.0.0": {
         "dependencies": {
+          "API.Domain": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2",
           "System.Data.SqlClient": "4.8.2"

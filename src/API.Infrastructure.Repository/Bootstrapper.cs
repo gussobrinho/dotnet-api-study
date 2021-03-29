@@ -1,5 +1,6 @@
 ﻿using API.Domain.Usuarios;
 using API.Infrastructure.Repository.Context;
+using API.Infrastructure.Repository.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +19,7 @@ namespace API.Infrastructure.Repository
                .AddScoped<DbContext>(s => s.GetService<ApiDbContext>());
 
             //Pedir Ajuda
-            //services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
             return services;
         }
