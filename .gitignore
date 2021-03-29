@@ -298,9 +298,10 @@ __pycache__/
 /.vs/
 /src/.vs/
 /src/.vs/API
-/src/Application.API/bin/Debug/netcoreapp3.1
-/src/Application.API/obj/Debug/netcoreapp3.1
-/src/Application.API/obj/Release/netcoreapp3.1
+/src/application.API/bin/Debug/netcoreapp3.1
+/src/application.API/obj/Debug/netcoreapp3.1
+/src/application.API/obj/Release/netcoreapp3.1
+/src/application.API/obj/
 /src/API.Application/bin/Debug/netcoreapp3.1
 /src/API.Application/obj/Debug/netcoreapp3.1
 /src/API.Application/obj/Release/netcoreapp3.1
