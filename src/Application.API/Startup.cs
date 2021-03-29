@@ -8,6 +8,8 @@ using Microsoft.OpenApi.Models;
 using API.IoC;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace application
 {
@@ -31,9 +33,10 @@ namespace application
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "application v1"));
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             var supportedCultures = new[] { new CultureInfo("pt-BR") };
             app.UseRequestLocalization(new RequestLocalizationOptions
@@ -60,12 +63,18 @@ namespace application
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "application", Version = "v1" });
-            });
+            
+            services.AddSwaggerGen()
+                .Configure<SwaggerGenOptions>(this.Configuration.GetSection("Swagger:SwaggerGenOptions"))
+                .Configure<SwaggerUIOptions>(c => this.Configuration.Bind("Swagger:SwaggerUIOptions", c));
 
             services.AddBootstrapperIoC(this.Configuration);
+
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                                            .AllowAnyMethod()
+                                                                            .AllowAnyHeader().WithExposedHeaders("X-Pagination")
+                                                                     ));
+
         }
     }
 }
