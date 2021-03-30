@@ -8,17 +8,19 @@ namespace API.Infrastructure.Authentication.Security
 {
     public class SigningConfigurations
     {
-        public SecurityKey Key { get; set; }
-        public SigningCredentials SigningCredentials { get; set; }
+        public SecurityKey Key { get; }
+        public SigningCredentials SigningCredentials { get; }
 
         public SigningConfigurations()
         {
             using (var provider = new RSACryptoServiceProvider(2048))
             {
-                this.Key = new RsaSecurityKey(provider.ExportParameters(true));
+                Key = new RsaSecurityKey(provider.ExportParameters(true));
             }
 
-            this.SigningCredentials = new SigningCredentials(this.Key, SecurityAlgorithms.RsaSha256Signature);
+            SigningCredentials = new SigningCredentials(
+                Key, SecurityAlgorithms.RsaSha256Signature);
+
         }
     }
 }

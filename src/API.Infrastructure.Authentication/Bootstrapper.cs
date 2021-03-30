@@ -10,6 +10,10 @@ namespace API.Infrastructure.Authentication
             services
                 .AddScoped<AuthenticationService>();
 
+            services
+                .AddSingleton<SigningConfigurations>()
+                .AddSingleton<TokenConfigurations>();
+
             return services;
         }
     }

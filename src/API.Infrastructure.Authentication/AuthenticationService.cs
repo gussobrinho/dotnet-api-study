@@ -12,16 +12,14 @@ namespace API.Infrastructure.Authentication
 {
     public class AuthenticationService
     {
-        private SigningConfigurations _signingConfigurations;
-        private TokenConfigurations _tokenConfiguration;
-        private IConfiguration _configuration { get; }
+        private readonly SigningConfigurations _signingConfigurations;
+        private readonly TokenConfigurations _tokenConfiguration;
 
-        public AuthenticationService(IConfiguration configuration, SigningConfigurations signingConfigurations,
-                        TokenConfigurations tokenConfigurations)
+        public AuthenticationService(IConfiguration configuration, SigningConfigurations signingConfigurations, TokenConfigurations tokenConfiguration)
         {
             this._signingConfigurations = signingConfigurations;
-            this._tokenConfiguration = tokenConfigurations;
-            this._configuration = configuration;
+            this._tokenConfiguration = tokenConfiguration;
+            
         }
 
         public async Task<JWTResponse> DoLogin(Usuario usuario)
