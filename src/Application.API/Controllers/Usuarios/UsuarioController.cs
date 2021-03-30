@@ -42,9 +42,9 @@ namespace application.API.Controllers.Usuarios
         public async Task<IActionResult> BuscarPorEmail([FromQuery] string email)
         {
             var query = new BuscarUsuarioPorEmailQuery(email);
-            await this._mediator.Send(query);
+            var response = await this._mediator.Send(query);
 
-            return Ok();
+            return Ok(response);
         }
     }
 }

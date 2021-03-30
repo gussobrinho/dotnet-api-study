@@ -13,6 +13,11 @@
     <ProjectReference Include="..\API.Application.Abstraction\API.Application.Abstraction.csproj" />
     <ProjectReference Include="..\API.Domain\API.Domain.csproj" />
     <ProjectReference Include="..\API.Exceptions\API.Exceptions.csproj" />
+    <ProjectReference Include="..\API.Infrastructure.Authentication\API.Infrastructure.Authentication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logins\Querys\" />
   </ItemGroup>
 
 </Project>

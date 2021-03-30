@@ -1,13 +1,14 @@
-﻿using System.Reflection;
-using API.Domain;
-using System.Net.Http;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using FluentValidation;
-using API.Application;
+﻿using API.Application;
 using API.Application.Abstraction;
-using API.Infrastructure.Repository;
+using API.Domain;
 using API.Exceptions;
+using API.Infrastructure.Authentication;
+using API.Infrastructure.Repository;
+using FluentValidation;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Net.Http;
+using System.Reflection;
 
 namespace API.IoC
 {
@@ -21,6 +22,7 @@ namespace API.IoC
             typeof(Application.Abstraction.Bootstrapper).Assembly,
             typeof(Infrastructure.Repository.Bootstrapper).Assembly,
             typeof(Exceptions.Bootstrapper).Assembly,
+            typeof(Infrastructure.Authentication.Bootstrapper).Assembly,
         };
 
         public static IServiceCollection AddBootstrapperIoC(this IServiceCollection services, IConfiguration configuration)
@@ -30,6 +32,7 @@ namespace API.IoC
                 .AddBootstrapperApplication()
                 .AddBootstrapperAbstraction()
                 .AddBootstrapperExceptions()
+                .AddBootstrappeAutorizacaoService()
                 .AddBootstrapperRepository(configuration);
 
             services.AddScoped<HttpClient>(s => new HttpClient(new HttpClientHandler

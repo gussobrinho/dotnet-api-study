@@ -9,6 +9,7 @@
     <PackageReference Include="FluentValidation" Version="9.5.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +17,7 @@
     <ProjectReference Include="..\API.Application\API.Application.csproj" />
     <ProjectReference Include="..\API.Domain\API.Domain.csproj" />
     <ProjectReference Include="..\API.Exceptions\API.Exceptions.csproj" />
+    <ProjectReference Include="..\API.Infrastructure.Authentication\API.Infrastructure.Authentication.csproj" />
     <ProjectReference Include="..\API.Infrastructure.Repository\API.Infrastructure.Repository.csproj" />
   </ItemGroup>
 

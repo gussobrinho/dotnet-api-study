@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace API.Infrastructure.Repository.Repositories
 {
@@ -29,7 +30,7 @@ namespace API.Infrastructure.Repository.Repositories
 
         public async Task<Usuario> FindByEmail(string email)
         {
-            return await base.EntitySet.FirstAsync(x => x.Email == email);
+            return await base.EntitySet.FirstOrDefaultAsync(x => x.Email == email);
         }
     }
 }
