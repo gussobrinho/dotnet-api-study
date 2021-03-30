@@ -3,6 +3,7 @@ using API.Application.Abstraction.Logins.Responses;
 using application.API.Controllers.Logins.Requests;
 using application.API.ViewModel;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -24,6 +25,7 @@ namespace application.API.Controllers
         }
 
         [HttpPost("Login")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ComumResponseViewModel<LoginJWTResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

@@ -12,23 +12,24 @@ namespace API.Infrastructure.Authentication
 {
     public class AuthenticationService
     {
-        private readonly SigninConfigurations _signingConfigurations;
-        private readonly TokenConfigurations _tokenConfiguration;
+        private SigningConfigurations _signingConfigurations;
+        private TokenConfigurations _tokenConfiguration;
+        private IConfiguration _configuration { get; }
 
-        public AuthenticationService(IConfiguration configuration, SigninConfigurations signingConfigurations, TokenConfigurations tokenConfiguration)
+        public AuthenticationService(IConfiguration configuration, SigningConfigurations signingConfigurations,
+                        TokenConfigurations tokenConfigurations)
         {
             this._signingConfigurations = signingConfigurations;
-            this._tokenConfiguration = tokenConfiguration;
-            this._tokenConfiguration.Audience = configuration.GetSection("TokenConfiguration:Audience").Value;
-            this._tokenConfiguration.Issuer = configuration.GetSection("TokenConfiguration:Issuer").Value;
-            this._tokenConfiguration.Seconds = int.Parse(configuration.GetSection("TokenConfiguration:Seconds").Value);
+            this._tokenConfiguration = tokenConfigurations;
+            this._configuration = configuration;
         }
 
         public async Task<JWTResponse> DoLogin(Usuario usuario)
         {
             if (usuario == null)
             {
-                return null;
+                return  new JWTResponse(false, null, null,
+                null, usuario.Email, "Falha na autenticação.");
             }
             else
             {

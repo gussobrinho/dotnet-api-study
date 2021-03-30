@@ -4,6 +4,7 @@ using API.Application.Abstraction.Usuarios.Response;
 using application.API.Controllers.Usuarios.Requests;
 using application.API.ViewModel;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace application.API.Controllers.Usuarios
         }
 
         [HttpPost("Cadastrar")]
+        [Authorize("Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ComumResponseViewModel))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -35,6 +37,7 @@ namespace application.API.Controllers.Usuarios
         }
 
         [HttpGet("BuscarPorEmail")]
+        [Authorize("Bearer")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ComumResponseViewModel<BuscarUsuarioPorEmailResponse>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

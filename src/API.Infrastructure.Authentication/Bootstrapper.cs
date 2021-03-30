@@ -9,9 +9,6 @@ namespace API.Infrastructure.Authentication
         {
             services
                 .AddScoped<AuthenticationService>();
-            services
-                .AddTransient<SigninConfigurations>()
-                .AddTransient<TokenConfigurations>();
 
             return services;
         }

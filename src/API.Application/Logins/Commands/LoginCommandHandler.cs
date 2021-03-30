@@ -35,7 +35,7 @@ namespace API.Application.Logins.Commands
             
             var result = await this._service.DoLogin(usuario);
 
-            if(result == null)
+            if(!result.Authenticated)
             {
                 throw new FalhaNaAutenticacaoException("Falha na autenticação.");
             }

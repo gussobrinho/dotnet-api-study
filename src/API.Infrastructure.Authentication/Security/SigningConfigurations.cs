@@ -6,12 +6,12 @@ using System.Text;
 
 namespace API.Infrastructure.Authentication.Security
 {
-    public class SigninConfigurations
+    public class SigningConfigurations
     {
         public SecurityKey Key { get; set; }
         public SigningCredentials SigningCredentials { get; set; }
 
-        public SigninConfigurations()
+        public SigningConfigurations()
         {
             using (var provider = new RSACryptoServiceProvider(2048))
             {
