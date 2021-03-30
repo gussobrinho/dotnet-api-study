@@ -28,8 +28,7 @@ namespace API.Infrastructure.Authentication
         {
             if (usuario == null)
             {
-                return new JWTResponse(false, string.Empty, string.Empty,
-                string.Empty, usuario.Email, "Falha na autenticação.");
+                return null;
             }
             else
             {
