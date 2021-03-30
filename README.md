@@ -8,4 +8,4 @@
 4. ~~Configurar EntityFramework~~
 5. ~~Configurar Migrations de teste~~
 6. ~~Configurar Distribuição de pastas~~
-7. Configurar Autenticação JWT
+7. ~~Configurar Autenticação JWT~~
