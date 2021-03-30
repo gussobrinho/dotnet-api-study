@@ -15,8 +15,8 @@ namespace API.Infrastructure.Authentication.Security
         {
             var token = new TokenConfigurations();
 
-            this.Audience = "ExemploAudience";
-            this.Issuer = "ExemploIssuer";
+            this.Audience = config.GetSection("TokenConfiguration:Audience").Value;
+            this.Issuer = config.GetSection("TokenConfiguration:Issuer").Value;
             this.Seconds = int.Parse(config.GetSection("TokenConfiguration:Seconds").Value);
 
             return token;
