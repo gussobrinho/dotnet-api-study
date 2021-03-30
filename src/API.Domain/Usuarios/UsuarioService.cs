@@ -19,8 +19,6 @@ namespace API.Domain.Usuarios
             var usuario = Usuario.New(nome, email);
 
             await this._repository.Add(usuario);
-
-            //return true;
         }
     }
 }
